@@ -2,6 +2,7 @@ import org.gradle.plugins.ide.idea.model.IdeaModel
 
 pluginManagement {
   repositories {
+    maven(url = "https://global.block-artifacts.com/artifactory/maven-cash-backend")
     mavenCentral()
     gradlePluginPortal()
   }
@@ -23,6 +24,7 @@ develocity {
 dependencyResolutionManagement {
   repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
+    maven(url = "https://global.block-artifacts.com/artifactory/maven-cash-backend")
     mavenCentral()
     maven(url = "https://s3-us-west-2.amazonaws.com/dynamodb-local/release")
   }
@@ -158,4 +160,3 @@ if (localSettings.exists()) {
   logger.lifecycle("Applying local settings at ${localSettings.absolutePath}")
   apply(from = localSettings)
 }
-
